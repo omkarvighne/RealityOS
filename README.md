@@ -75,36 +75,7 @@ npm run ios
 
 These commands use native Expo run workflows and may require Android Studio or Xcode. A `web` script exists in `package.json`, but the repository is primarily configured as a React Native mobile application; web functionality has not been verified.
 
-### Configuration and current limitations
 
-**Do not paste live API keys or passwords into `App.tsx`.**
-
-The checked-in source uses placeholder values for Gemini and Firebase configuration. With placeholders, AI requests and cloud features will not function as real services. Moving the Gemini request to a server that holds the secret is necessary before enabling it. Firebase client configuration is not itself a secret, but Firebase access must be secured using proper rules and authentication.
-
-**Security work required:** The current source also contains a hardcoded Firebase email/password sign-in flow. This must be removed or redesigned before real use; any password that has been used should be rotated. Do not use shared or hardcoded user credentials in a public client application.
-
-Some notifications, microphone features, and background behaviors depend on device permissions and platform support. No automated test or production-readiness claim is made here.
-
-## Screenshots and demo
-
-Add real screenshots or a short walkthrough video here when available:
-
-- Directives and Side Quests
-- Habit Matrix
-- Journal and Cognitive Dump
-- Analytics dashboard
-- AI Adviser
-
-Avoid including real account credentials or personal journal entries in screenshots.
-
-## Next improvements
-
-- [ ] Replace hardcoded Firebase authentication with user-managed sign-in
-- [ ] Move Gemini requests behind a secure backend
-- [ ] Add an `.env.example` for non-secret configuration and keep credentials out of Git
-- [ ] Break up `App.tsx` into components, screens, hooks, and services
-- [ ] Add tests and reproducible setup verification
-- [ ] Add screenshots and a demo recording
 
 ## Author
 
